@@ -1,99 +1,81 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlacknWhite Clothing</title>
+    <title>Black n White Clothing</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="menu-icon">
-                <i class="fas fa-bars"></i>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Black n White</h1>
+            <p>Clothing</p>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <div class="nav-icons">
+                <button class="search-btn">
+                    <span class="search-icon">🔍</span>
+                </button>
+                <a href="cart.html" class="cart-btn">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a>
             </div>
-            <div class="logo">
-                <img src="logo.png" alt="BlacknWhite Logo">
+        </div>
+    </nav>
+    <main class="hero">
+        <h2>Wear your style<br>with comfort</h2>
+        <div class="carousel">
+            <div class="product-container">
+                <img src="images/tshirt1.png" class="product left" alt="Elite Hoodie">
+                <img src="images/tshirt2.png" class="product center active" alt="Elite T-Shirt">
+                <img src="images/tshirt3.png" class="product right" alt="Black T-shirt">
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
+            <div class="carousel-controls">
+                <button class="control-btn prev">&lt;</button>
+                <button class="control-btn next">&gt;</button>
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h1>Welcome to BlacknWhite</h1>
-                <p>Discover the perfect blend of style and comfort</p>
-                <a href="#shop" class="cta-button">Shop Now</a>
-            </div>
-        </section>
-
-        <section id="shop">
-            <h2>Featured Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="t-shirt.png" alt="T-Shirt">
-                    <h3>T-shirt (summer)</h3>
-                    <p class="price">$29.99</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="hoodies.png" alt="Hoodie">
-                    <h3>Hoodie</h3>
-                    <p class="price">$89.99</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="cap.png" alt="Cap">
-                    <h3>Cap</h3>
-                    <p class="price">$59.99</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <h2>About Us</h2>
-            <p>BlacknWhite is your destination for timeless fashion pieces that combine elegance with comfort. Our collection features carefully curated items that reflect the perfect balance of style and practicality.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <p>WhatsApp: +233500693175</p>
-                <p>Email: blacknwhiteghana01@gmail.com</p>
-            </div>
-        </section>
+        </div>
+        <div class="background-text"></div>
     </main>
-
-    <div id="cart-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Your Cart</h2>
-            <div id="cart-items"></div>
-            <div class="cart-total">
-                <p>Total: $<span id="total-amount">0.00</span></p>
+    <div class="product-popup" id="productPopup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <h1>ELITE T-SHIRT</h1>
+                <p class="price">GHS90.00</p>
+                <p class="description">Experience ultimate comfort with our premium Elite Hoodie. Made from high-quality cotton blend, featuring a modern fit, adjustable hood, and convenient front pocket. Perfect for both casual wear and active lifestyle.</p>
+                <div class="color-options">
+                    <span class="color-dot black active"></span>
+                    <span class="color-dot white"></span>
+                    <span class="color-dot gray"></span>
+                </div>
+                <div class="size-options">
+                    <button class="size-btn">S</button>
+                    <button class="size-btn">M</button>
+                    <button class="size-btn">L</button>
+                    <button class="size-btn">XL</button>
+                </div>
+                <button class="buy-now-btn">Buy now</button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
-            <button id="checkout-button" class="checkout-button">Proceed to Checkout</button>
+            <div class="popup-right">
+                <img src="images/tshirt1.png" alt="Elite Hoodie">
+            </div>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2025 BlacknWhite Clothing. All rights reserved.</p>
-    </footer>
-
+    <div class="search-overlay">
+        <div class="search-container">
+            <input type="text" placeholder="Search products..." class="search-input">
+            <button class="close-search">×</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
-</html>
+</html> 
